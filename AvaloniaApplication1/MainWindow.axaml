@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+        x:Class="AvaloniaApplication1.MainWindow"
+        Title="AvaloniaApplication1">
+    
+    <Grid ColumnDefinitions="200, *">
+        <Border Grid.Column="0" Background="{DynamicResource PrimaryBackgroundGradient}" Padding="20">
+            <StackPanel Spacing="20">
+                <Label FontSize="50" HorizontalAlignment="Center" Foreground="Azure"> blah </Label>
+                <Button Classes="menu" Tag="MenuView" Click="ViewHandler" Content="button1"></Button>
+                <Button Classes="dashboard" Tag="DashboardView" Click="ViewHandler" Content="button2"></Button>
+                <Button Content="button3" ></Button>
+                <CheckBox Content="Mode" IsChecked="False" IsCheckedChanged="ThemeToggled" Foreground="{DynamicResource PrimaryForeground}" ></CheckBox>
+            </StackPanel>
+        </Border>
+        
+        <ContentControl Grid.Column="1" x:Name="ContentArea"></ContentControl>
+
+    </Grid>
+</Window>

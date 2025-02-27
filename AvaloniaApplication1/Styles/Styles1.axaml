@@ -1,0 +1,89 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20" Background="Black">
+            <!-- Add Controls for Previewer Here -->
+            <StackPanel Spacing="10">
+                <Button Content="Hello" Classes="menu"></Button>
+                <Button Content="Hello" Classes="dashboard"></Button>
+
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    <Style Selector="Button.menu">
+        <Setter Property="BorderThickness" Value="1"></Setter>
+        <Setter Property="BorderBrush" Value="Ivory"></Setter>
+        <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
+        <Setter Property="Foreground" Value="Gainsboro"></Setter>
+        <Setter Property="CornerRadius" Value="10"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Padding" Value="5"></Setter>
+        <Setter Property="FontSize" Value="30"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Border Background="{DynamicResource PrimaryBackgroundGradientReversed}"
+                                BorderBrush="{DynamicResource ButtonGradientOutline}"
+                                BorderThickness="1"
+                                CornerRadius="10">
+                            <Border Background="{DynamicResource ButtonGradient}"
+                                    CornerRadius="9">
+                            </Border>
+                        </Border>
+                    <ContentPresenter
+                        Foreground ="{DynamicResource PrimaryForeground}"
+                        FontSize ="30"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Padding="10"
+                        Content="{TemplateBinding Content}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    
+    <Style Selector="Button.dashboard">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid ColumnDefinitions="*, 30" Background="{DynamicResource PrimaryBackgroundGradient}">
+                        <Border Grid.Column="0" Grid.ColumnSpan="2" Background="Transparent" Name="HoverOverlay"></Border>
+                        <ContentControl Grid.Column="0" Grid.ColumnSpan="2" Content="{StaticResource RightSideButtonGradientRectangle}"></ContentControl>
+                        <ContentPresenter Grid.Column="0" Grid.ColumnSpan="2"
+                                          Foreground ="{DynamicResource PrimaryForeground}"
+                                          FontSize ="30"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          Content="{TemplateBinding Content}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        
+    </Style>
+    
+    <Style Selector="Button.menu:pointerover /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="White" BlurRadius="75"/>
+            </Setter.Value>
+        </Setter>
+        
+    </Style>
+    
+    <Style Selector="Button.dashboard:pointerover /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="White"></Setter>
+    </Style>
+    <Style Selector="Button.dashboard:pointerover /template/ Grid">
+        <Setter Property="Background" Value="{DynamicResource PrimaryButtonHoverGradient}"/>
+    </Style>
+   
+</Styles>
