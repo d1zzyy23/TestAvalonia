@@ -16,7 +16,7 @@ public partial class MainWindow : Window
 
     private void ViewHandler(object sender, RoutedEventArgs e)
     {
-        if (sender is Button button && button.Tag is string viewName)
+        if (sender is Button button && button.Name is string viewName)
         {
             string fullWindowName = $"{GetType().Namespace}.{viewName}";
             var viewType = Assembly.GetExecutingAssembly().GetType(fullWindowName);

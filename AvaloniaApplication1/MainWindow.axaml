@@ -7,11 +7,11 @@
         Title="AvaloniaApplication1">
     
     <Grid ColumnDefinitions="200, *">
-        <Border Grid.Column="0" Background="{DynamicResource PrimaryBackgroundGradient}" Padding="20">
+        <Border Grid.Column="0" Background="{DynamicResource PrimaryBackgroundGradientReversed}" Padding="20">
             <StackPanel Spacing="20">
-                <Label FontSize="50" HorizontalAlignment="Center" Foreground="Azure"> blah </Label>
-                <Button Classes="menu" Tag="MenuView" Click="ViewHandler" Content="button1"></Button>
-                <Button Classes="dashboard" Tag="DashboardView" Click="ViewHandler" Content="button2"></Button>
+                <Label FontSize="50" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryForeground}"> blah </Label>
+                <Button Classes="Menu" Content="button1" Name="MenuView" Click="ViewHandler" Tag="{SvgImage /Assets/Images/icons8-home.svg}"></Button>
+                <Button Classes="Outline" Name="DashboardView" Click="ViewHandler" Content="button2"></Button>
                 <Button Content="button3" ></Button>
                 <CheckBox Content="Mode" IsChecked="False" IsCheckedChanged="ThemeToggled" Foreground="{DynamicResource PrimaryForeground}" ></CheckBox>
             </StackPanel>

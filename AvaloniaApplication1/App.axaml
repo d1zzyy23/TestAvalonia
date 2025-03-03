@@ -12,8 +12,12 @@
     <Application.Resources>
         <SolidColorBrush x:Key="PrimaryBackground">#ff222222</SolidColorBrush>
         <SolidColorBrush x:Key="PrimaryForeground">Gainsboro</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryAccent">#78078c</SolidColorBrush>
+
         <Color x:Key="PrimaryBackgroundColor">#ff222222</Color>
         <Color x:Key="PrimaryBackgroundColor2">#ff111111</Color>
+        <Color x:Key="PrimaryAccentColor">#78078c</Color>
+
 
         
         <LinearGradientBrush x:Key="PrimaryBackgroundGradient" StartPoint="0%,0%" EndPoint="100%,0%">
@@ -35,38 +39,24 @@
             <GradientStop Color="#444444" Offset="1"></GradientStop>
         </LinearGradientBrush>
         
-        <Rectangle x:Key="RightSideButtonGradientRectangle">
-            <Rectangle.Fill>
-                <ConicGradientBrush Center="105%, 50%" Angle="90">
-                    <GradientStop Color="DarkMagenta" Offset="0.25"></GradientStop>
-                    <!--<GradientStop Color="Transparent" Offset="0.5"></GradientStop>-->
-                    <GradientStop Color="DarkCyan" Offset="0.75"></GradientStop>
-                </ConicGradientBrush>
-            </Rectangle.Fill>
-            <Rectangle.OpacityMask>
-                <LinearGradientBrush StartPoint="100%,0%" EndPoint="33%,0%">
-                    <GradientStop Offset="0.0" Color="Black"/>  <!-- Fully visible -->
-                    <GradientStop Offset="1.0" Color="Transparent"/>  <!-- Fades out -->
-                </LinearGradientBrush>
-            </Rectangle.OpacityMask>
-        </Rectangle>
-        
         <LinearGradientBrush x:Key="ButtonGradient" StartPoint="0%,100%" EndPoint="100%,0%" >
             <GradientStop Color="{DynamicResource PrimaryBackgroundColor2}" Offset="0.1"></GradientStop>
-            <GradientStop Color="{DynamicResource PrimaryBackgroundColor}" Offset="0.7"></GradientStop>
-            <GradientStop Color="Purple" Offset="0.9"></GradientStop>
+            <GradientStop Color="{DynamicResource PrimaryBackgroundColor}" Offset="0.6"></GradientStop>
+            <GradientStop Color="{DynamicResource PrimaryAccentColor}" Offset="1.0"></GradientStop>
         </LinearGradientBrush>
         
         <LinearGradientBrush x:Key="ButtonGradientOutline" StartPoint="0%,100%" EndPoint="100%,0%" >
             <GradientStop Color="{DynamicResource PrimaryBackgroundColor2}" Offset="0.1"></GradientStop>
             <GradientStop Color="{DynamicResource PrimaryBackgroundColor}" Offset="0.4"></GradientStop>
-            <GradientStop Color="#78078c" Offset="0.9"></GradientStop>
+            <GradientStop Color="{DynamicResource PrimaryAccentColor}" Offset="0.9"></GradientStop>
         </LinearGradientBrush>
         
-        <LinearGradientBrush x:Key="FadeBrush" StartPoint="150%,0%" EndPoint="75%,100%" >
+        <LinearGradientBrush x:Key="FadeBrush" StartPoint="100%,0%" EndPoint="75%,100%" >
             <GradientStop Offset="0.0" Color="Black"/>  <!-- Fully visible -->
             <GradientStop Offset="1.0" Color="Transparent"/>  <!-- Fades out -->
         </LinearGradientBrush>
+        
+        <DropShadowEffect x:Key="ButtonHighlight" Color="White" BlurRadius="75" ></DropShadowEffect>
 
     </Application.Resources>
 </Application>

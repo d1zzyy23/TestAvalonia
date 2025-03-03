@@ -1,6 +1,10 @@
+using System.Reflection;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Avalonia.Metadata;
+
+[assembly: XmlnsDefinition("https://github.com/avaloniaui", "AvaloniaApplication1.Controls")]
 
 namespace AvaloniaApplication1;
 

@@ -64,3 +64,11 @@ C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1
 C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\obj\Debug\net9.0\Avalonia.FDB175D9.Up2Date
 C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\obj\Debug\net9.0\AvaloniaApplication1.genruntimeconfig.cache
 C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\obj\Debug\net9.0\ref\AvaloniaApplication1.dll
+C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\obj\Debug\net9.0\AvaloniaApplication1.sourcelink.json
+C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\bin\Debug\net9.0\Avalonia.Svg.Skia.dll
+C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\bin\Debug\net9.0\ExCSS.dll
+C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\bin\Debug\net9.0\ShimSkiaSharp.dll
+C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\bin\Debug\net9.0\SkiaSharp.HarfBuzz.dll
+C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\bin\Debug\net9.0\Svg.Custom.dll
+C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\bin\Debug\net9.0\Svg.Model.dll
+C:\Users\dlykk\Documents\test projects\AvaloniaApplication1\AvaloniaApplication1\bin\Debug\net9.0\Svg.Skia.dll
