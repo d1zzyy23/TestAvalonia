@@ -12,7 +12,7 @@
                 <Label FontSize="50" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryForeground}"> blah </Label>
                 <Button Classes="Menu" Content="button1" Name="MenuView" Click="ViewHandler" Tag="{SvgImage /Assets/Images/icons8-home.svg}"></Button>
                 <Button Classes="Outline" Name="DashboardView" Click="ViewHandler" Content="button2"></Button>
-                <Button Content="button3" ></Button>
+                <Button Classes="Transparent" Content="button3" ></Button>
                 <CheckBox Content="Mode" IsChecked="False" IsCheckedChanged="ThemeToggled" Foreground="{DynamicResource PrimaryForeground}" ></CheckBox>
             </StackPanel>
         </Border>

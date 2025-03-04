@@ -1,13 +1,14 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
-        <Border Padding="20" Background="Black">
+        <Border Padding="20" Background="Gray">
             <!-- Add Controls for Previewer Here -->
-            <Grid ColumnDefinitions="Auto,10,Auto,10,Auto">
+            <Grid ColumnDefinitions="Auto,10,Auto,10,Auto,10,Auto">
             <StackPanel Spacing="10" Grid.Column="0">
                 <Button Content="Hello" Classes="MenuOutline"></Button>
                 <Button Content="Hello" Classes="Menu"></Button>
                 <Button Content="Hello" Classes="Outline"></Button>
+                <Button Content="Hello" Classes="Transparent"></Button>
                 
             </StackPanel>
                 <StackPanel Spacing="10" Grid.Column="2">
@@ -29,22 +30,25 @@
                             <Label Content="Home"></Label>
                         </StackPanel>
                     </Button>
+                    <Button Classes="Transparent">
+                        <StackPanel Classes="PictureButton">
+                            <Image Source="{SvgImage /Assets/Images/icons8-home.svg}" ></Image>
+                            <Label Content="Home"></Label>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
                 <StackPanel Spacing="10" Grid.Column="4">
                     <Button Classes="MenuOutline">
-                        <StackPanel Classes="PictureButton">
-                            <Image Source="{SvgImage /Assets/Images/icons8-home.svg}" ></Image>
-                        </StackPanel>
+                        <Image Source="{SvgImage /Assets/Images/icons8-home.svg}" ></Image>
                     </Button>
                     <Button Classes="Menu">
-                        <StackPanel Classes="PictureButton">
-                            <Image Source="{SvgImage /Assets/Images/icons8-home.svg}" ></Image>
-                        </StackPanel>
+                        <Image Source="{SvgImage /Assets/Images/icons8-home.svg}" ></Image>
                     </Button>
                     <Button Classes="Outline">
-                        <StackPanel Classes="PictureButton">
-                            <Image Source="{SvgImage /Assets/Images/icons8-home.svg}" ></Image>
-                        </StackPanel>
+                        <Image Source="{SvgImage /Assets/Images/icons8-home.svg}" ></Image>
+                    </Button>
+                    <Button Classes="Transparent">
+                        <Image Source="{SvgImage /Assets/Images/icons8-home.svg}" ></Image>
                     </Button>
                 </StackPanel>
             </Grid>
@@ -134,18 +138,41 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        
     </Style>
     
     <Style Selector=":is(Button).Outline:pointerover /template/ ContentPresenter">
         <Setter Property="Foreground" Value="White"></Setter>
-        <Setter Property="Effect" Value="{DynamicResource ButtonHighlight}"></Setter>
     </Style>
     
     <Style Selector=":is(Button).Outline:pointerover /template/ Border">
         <Setter Property="Background" Value="{DynamicResource PrimaryAccentColor}"></Setter>
     </Style>
    
+    
+    <Style Selector=":is(Button).Transparent">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Border Background="Transparent" CornerRadius="10">
+                            <ContentPresenter
+                                Foreground ="{DynamicResource PrimaryForeground}"
+                                FontSize ="30"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Padding="10"
+                                Content="{TemplateBinding Content}"/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style Selector=":is(Button).Transparent:pointerover /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="BoxShadow" Value="0 0 10 -5 White"></Setter>
+    </Style>
     
     <Style Selector="StackPanel.PictureButton">
         <Setter Property="Orientation" Value="Horizontal"></Setter>
