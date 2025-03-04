@@ -34,7 +34,7 @@ public partial class MainWindow : Window
 
         if (!toggled)
         {
-            resources["PrimaryBackground"] = new SolidColorBrush(new Color(255, 22, 22, 22));
+            resources!["PrimaryBackground"] = new SolidColorBrush(new Color(255, 22, 22, 22));
             resources["PrimaryForeground"] = new SolidColorBrush(Colors.Gainsboro);
             resources["PrimaryBackgroundColor"] = new Color(255, 22, 22, 22);
             resources["PrimaryBackgroundColor2"] = new Color(255, 11,11,11);
@@ -42,7 +42,7 @@ public partial class MainWindow : Window
         }
         else
         {
-            resources["PrimaryBackground"] = new SolidColorBrush(Colors.Gainsboro);
+            resources!["PrimaryBackground"] = new SolidColorBrush(Colors.Gainsboro);
             resources["PrimaryForeground"] = new SolidColorBrush(new Color(255, 22, 22, 22));
             resources["PrimaryBackgroundColor"] = Colors.Gainsboro;
             resources["PrimaryBackgroundColor2"] = Colors.White;

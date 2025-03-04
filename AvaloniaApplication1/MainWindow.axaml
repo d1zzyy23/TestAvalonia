@@ -6,14 +6,15 @@
         x:Class="AvaloniaApplication1.MainWindow"
         Title="AvaloniaApplication1">
     
-    <Grid ColumnDefinitions="200, *">
+    <Grid ColumnDefinitions="Auto, *">
         <Border Grid.Column="0" Background="{DynamicResource PrimaryBackgroundGradientReversed}" Padding="20">
             <StackPanel Spacing="20">
                 <Label FontSize="50" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryForeground}"> blah </Label>
-                <Button Classes="Menu" Content="button1" Name="MenuView" Click="ViewHandler" Tag="{SvgImage /Assets/Images/icons8-home.svg}"></Button>
+                <Button Classes="Menu" Content="button1" Name="MenuView" Click="ViewHandler"></Button>
                 <Button Classes="Outline" Name="DashboardView" Click="ViewHandler" Content="button2"></Button>
                 <Button Classes="Transparent" Content="button3" ></Button>
                 <CheckBox Content="Mode" IsChecked="False" IsCheckedChanged="ThemeToggled" Foreground="{DynamicResource PrimaryForeground}" ></CheckBox>
+                <Button Classes="Menu" Content="Admin"></Button>
             </StackPanel>
         </Border>
         
